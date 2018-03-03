@@ -10,6 +10,6 @@ class TransferMoney < BaseInteractor
     res = EthClient.personal_send_transaction(tx, params[:sender_password])
     context.transaction = res['result']
   rescue IOError => e
-    context.fail!
+    context.fail!(error: 'IOError')
   end
 end

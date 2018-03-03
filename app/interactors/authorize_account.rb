@@ -6,7 +6,7 @@ class AuthorizeAccount < BaseInteractor
     if account.present? && account.password == context.params[:password]
       context.account = account
     else
-      context.fail!
+      context.fail!(error: 'Not authorized!')
     end
   end
 end

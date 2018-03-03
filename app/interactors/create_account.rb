@@ -13,7 +13,7 @@ class CreateAccount < BaseInteractor
     if account.save
       context.account = account
     else
-      context.fail!
+      context.fail!(error: account.errors.to_json)
     end
   end
 end

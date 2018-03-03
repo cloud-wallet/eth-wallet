@@ -4,7 +4,7 @@ class Api::V1::MoneyTransfersController < Api::V1::BaseController
     if result.success?
       render json: result.account
     else
-      render json: result.errors
+      render json: result.error
     end
   end
 

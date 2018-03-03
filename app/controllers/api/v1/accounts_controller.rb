@@ -4,7 +4,7 @@ class Api::V1::AccountsController < Api::V1::BaseController
     if result.success?
       render json: result.account
     else
-      rrender json: result.errors
+      render json: result.error
     end
   end
 end
