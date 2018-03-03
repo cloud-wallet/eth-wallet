@@ -1,5 +1,4 @@
 class CreateAccount < BaseInteractor
-
   def call
     password = context.password
 
